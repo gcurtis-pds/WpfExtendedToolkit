@@ -1,4 +1,4 @@
-﻿/*************************************************************************************
+/*************************************************************************************
 
    Extended WPF Toolkit
 
@@ -1463,7 +1463,7 @@ namespace Xceed.Wpf.DataGrid
         var parentItemType = parentPropertyDescriptionRoute.Current.DataType;
         var childPropertyDescriptions = new PropertyDescriptionRouteDictionary();
 
-        ItemsSourceHelper.SetPropertyDescriptions( childPropertyDescriptions, null, null, parentItemType, false );
+        ItemsSourceHelper.SetPropertyDescriptions( childPropertyDescriptions, null, null, parentItemType, true );
 
         foreach( var childPropertyDescriptionRoute in childPropertyDescriptions.Values )
         {
@@ -1496,7 +1496,7 @@ namespace Xceed.Wpf.DataGrid
       }
       else
       {
-        ItemsSourceHelper.SetPropertyDescriptions( propertyDescriptions, model, itemsSource, itemType, false );
+        ItemsSourceHelper.SetPropertyDescriptions( propertyDescriptions, model, itemsSource, itemType, true );
 
         var currentSegment = propertyRoute.Current;
         if( currentSegment.Type == PropertyRouteSegmentType.Indexer )
